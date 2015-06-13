@@ -1,0 +1,19 @@
+<template name="messages">
+  <div class='messages'>
+    <ul class="collection">
+      {{#each messages}}
+      <li>{{> message}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="message">
+  <div class="row">
+    <div class="input-field col s6">
+      <ul class="collection">
+        <li class="collection-item"><strong>{{username}}: </strong>{{body}}<br></li>
+      </ul>
+    </div>
+  </div>
+</template>
