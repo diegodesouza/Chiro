@@ -6,6 +6,8 @@ Template.messageSubmit.events({
     var message = $message.val();
 
     Meteor.call('Messages.save', message );
+    event.target.message.value = "";
+    return false;
   }
 });
 
