@@ -1,4 +1,6 @@
 <template name="home">
-   {{> messageSubmit}}
+  {{#if currentUser}}
+    {{> messageSubmit}}
+  {{/if}}
    <p>{{> messages}}</p>
 </template>

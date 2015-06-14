@@ -1,13 +1,26 @@
 Messages = new Mongo.Collection('messages');
 
+// Meteor.methods({
+  // 'Messages.save': function(body) {
+    // var user = Meteor.user();
+    // // var currentUserId = Meteor.user().emails[0].address;
+
+    // Messages.insert({
+      // body: body,
+      // createdAt: new Date(),
+      // createdBy: user.username
+    // });
+  // }
+// });
+
 Meteor.methods({
-  'Messages.save': function(body) {
-    var currentUserId = Meteor.user().emails[0].address;
+ 'messageInsert': function(body) {
+    var user = Meteor.user();
 
     Messages.insert({
-      body: body,
-      createdAt: new Date(),
-      createdBy: currentUserId
+      message: body,
+      username: user.username,
+      submitted: new Date()
     });
   }
 });

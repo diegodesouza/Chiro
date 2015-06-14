@@ -5,7 +5,7 @@ Template.messageSubmit.events({
     var $message = $(event.target).find('[name=message]');
     var message = $message.val();
 
-    Meteor.call('Messages.save', message );
+    Meteor.call('messageInsert', message);
     event.target.message.value = "";
     return false;
   }
