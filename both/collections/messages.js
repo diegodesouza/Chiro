@@ -7,7 +7,9 @@ Meteor.methods({
     Messages.insert({
       message: body,
       username: user.username,
-      createdAt: new Date()
+      createdAt: moment().format("ddd, h:mm:ss a"),
+      admin: false
+     // create something like admin: true or admin user.admin(true)
     });
   }
 });

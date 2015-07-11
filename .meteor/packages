@@ -7,5 +7,7 @@
 meteor-platform
 accounts-password
 iron:router
-accounts-ui
 accounts-base
+momentjs:moment
+accounts-ui
+alanning:roles

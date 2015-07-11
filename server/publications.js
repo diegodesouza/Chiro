@@ -1,3 +1,7 @@
 Meteor.publish('messages', function() {
-  return Messages.find();
+  if (this.userId) {
+    return Messages.find();
+  } else {
+    this.ready();
+  }
 });
